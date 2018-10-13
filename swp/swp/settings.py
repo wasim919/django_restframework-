@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'accounts'
 ]
 
@@ -88,8 +89,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'students',
-        'USER': 'root',
-        'PASSWORD': '',
+        'USER': 'tars',
+        'PASSWORD': 'Tars@123',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
