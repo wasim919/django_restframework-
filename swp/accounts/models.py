@@ -14,3 +14,16 @@ class StudentProfile(models.Model):
 
     def __str__(self):
         return str(self.first_name)
+
+class FoodOrder(models.Model):
+    idfood_order = models.IntegerField(primary_key=True)
+    student = models.ForeignKey('StudentProfile', on_delete = models.DO_NOTHING, blank=True, null=True)
+    #food = models.ForeignKey('Menu', models.DO_NOTHING, blank=True, null=True)
+    quantity = models.IntegerField(blank=True, null=True)
+    # timestamp = models.DateTimeField(blank=True, null=True)
+    # created_at = models.DateField(blank=True, null=True)
+    # created_by = models.CharField(max_length=45, blank=True, null=True)
+    # modified_at = models.DateField(blank=True, null=True)
+    # modified_by = models.CharField(max_length=45, blank=True, null=True)
+    def __str__(self):
+        return str(self.student.first_name)
